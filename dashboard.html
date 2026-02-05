@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Free Learning Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path d="M16 2L4 8V14C4 21 8 27 16 30C24 27 28 21 28 14V8L16 2Z" fill="currentColor"/>
+                        <path d="M16 10L12 12V16L16 18L20 16V12L16 10Z" fill="white"/>
+                    </svg>
+                    <span>Free Learning Hub</span>
+                </a>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="courses.html" class="nav-link">Courses</a>
+                <a href="dashboard.html" class="nav-link active">Dashboard</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="feedback.html" class="nav-link">Feedback</a>
+            </div>
+            <div class="nav-actions">
+                <button class="btn-secondary" id="loginBtn">Sign In</button>
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Header -->
+    <section style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: white; padding: var(--spacing-xl) 0;">
+        <div class="container">
+            <h1 id="welcomeMessage" style="font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3rem); margin-bottom: var(--spacing-sm);">
+                Welcome back!
+            </h1>
+            <p style="font-size: 1.1rem; opacity: 0.9;">
+                Track your progress and continue your learning journey
+            </p>
+        </div>
+    </section>
+
+    <!-- Dashboard Content -->
+    <section style="padding: var(--spacing-2xl) 0;">
+        <div class="container">
+            <!-- Stats Cards -->
+            <div class="dashboard-grid" style="margin-bottom: var(--spacing-2xl);">
+                <div class="dashboard-card">
+                    <div class="dashboard-card-header">
+                        <h3 class="dashboard-card-title">Enrolled Courses</h3>
+                        <span style="font-size: 2rem;">📚</span>
+                    </div>
+                    <div style="font-size: 3rem; font-family: var(--font-display); font-weight: 700; color: var(--primary);" id="totalCourses">
+                        0
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="dashboard-card-header">
+                        <h3 class="dashboard-card-title">Completed Courses</h3>
+                        <span style="font-size: 2rem;">✅</span>
+                    </div>
+                    <div style="font-size: 3rem; font-family: var(--font-display); font-weight: 700; color: var(--success);" id="completedCourses">
+                        0
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="dashboard-card-header">
+                        <h3 class="dashboard-card-title">Total Lessons</h3>
+                        <span style="font-size: 2rem;">📖</span>
+                    </div>
+                    <div style="font-size: 3rem; font-family: var(--font-display); font-weight: 700; color: var(--accent);" id="totalLessons">
+                        0
+                    </div>
+                </div>
+            </div>
+
+            <!-- My Courses -->
+            <div class="dashboard-card" style="margin-bottom: var(--spacing-xl);">
+                <div class="dashboard-card-header">
+                    <h2 class="dashboard-card-title" style="font-size: 1.75rem;">My Courses</h2>
+                    <a href="courses.html" class="btn-primary btn-small">Browse More</a>
+                </div>
+                <div id="enrolledCoursesList">
+                    <!-- Enrolled courses will be loaded here -->
+                </div>
+            </div>
+
+            <!-- Progress Analytics -->
+            <div class="dashboard-card">
+                <div class="dashboard-card-header">
+                    <h2 class="dashboard-card-title" style="font-size: 1.75rem;">Learning Progress</h2>
+                </div>
+                <p style="color: var(--text-secondary); margin-bottom: var(--spacing-lg);">
+                    Visualize your learning journey with interactive charts powered by Google Sheets
+                </p>
+                <div class="iframe-container" style="padding-bottom: 60%; min-height: 400px;">
+                    <!-- Example Google Sheets Chart embed -->
+                    <iframe 
+                        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRzYF0ZQ0Q0Q0Q0Q0Q0Q0Q0Q0Q0Q0Q0Q0Q0Q0Q0Q0Q0Q0Q0Q0/pubchart?oid=1234567890&format=interactive"
+                        title="Progress Chart">
+                    </iframe>
+                </div>
+                <p style="color: var(--text-tertiary); font-size: 0.85rem; margin-top: var(--spacing-md);">
+                    <strong>Note:</strong> This is a placeholder Google Sheets chart. In a real implementation, this would show your actual course progress data.
+                </p>
+            </div>
+
+            <!-- Activity Timeline -->
+            <div class="dashboard-card" style="margin-top: var(--spacing-xl);">
+                <div class="dashboard-card-header">
+                    <h2 class="dashboard-card-title" style="font-size: 1.75rem;">Recent Activity</h2>
+                </div>
+                <div style="display: grid; gap: var(--spacing-md);">
+                    <div style="padding: var(--spacing-md); background: rgba(10, 77, 140, 0.03); border-left: 3px solid var(--primary); border-radius: var(--radius-sm);">
+                        <div style="font-weight: 600; margin-bottom: var(--spacing-xs);">Completed Lesson</div>
+                        <div style="font-size: 0.9rem; color: var(--text-secondary);">HTML Fundamentals - Web Development Bootcamp</div>
+                        <div style="font-size: 0.85rem; color: var(--text-tertiary); margin-top: var(--spacing-xs);">2 hours ago</div>
+                    </div>
+                    <div style="padding: var(--spacing-md); background: rgba(40, 167, 69, 0.03); border-left: 3px solid var(--success); border-radius: var(--radius-sm);">
+                        <div style="font-weight: 600; margin-bottom: var(--spacing-xs);">Enrolled in Course</div>
+                        <div style="font-size: 0.9rem; color: var(--text-secondary);">Data Science with Python</div>
+                        <div style="font-size: 0.85rem; color: var(--text-tertiary); margin-top: var(--spacing-xs);">1 day ago</div>
+                    </div>
+                    <div style="padding: var(--spacing-md); background: rgba(230, 92, 0, 0.03); border-left: 3px solid var(--accent); border-radius: var(--radius-sm);">
+                        <div style="font-weight: 600; margin-bottom: var(--spacing-xs);">Quiz Passed</div>
+                        <div style="font-size: 0.9rem; color: var(--text-secondary);">Score: 95% - JavaScript Essentials Quiz</div>
+                        <div style="font-size: 0.85rem; color: var(--text-tertiary); margin-top: var(--spacing-xs);">3 days ago</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recommendations -->
+            <div class="dashboard-card" style="margin-top: var(--spacing-xl);">
+                <div class="dashboard-card-header">
+                    <h2 class="dashboard-card-title" style="font-size: 1.75rem;">Recommended for You</h2>
+                </div>
+                <p style="color: var(--text-secondary); margin-bottom: var(--spacing-lg);">
+                    Based on your learning interests and progress
+                </p>
+                <div style="display: grid; gap: var(--spacing-md);">
+                    <div style="display: flex; gap: var(--spacing-md); padding: var(--spacing-md); border: 1px solid var(--border); border-radius: var(--radius-md); transition: var(--transition-base);">
+                        <div style="flex-shrink: 0; width: 120px; height: 80px; border-radius: var(--radius-sm); overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=200&h=150&fit=crop" alt="Course" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div style="flex: 1;">
+                            <h4 style="font-weight: 600; margin-bottom: var(--spacing-xs);">Advanced JavaScript Concepts</h4>
+                            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: var(--spacing-xs);">Take your JavaScript skills to the next level</p>
+                            <div style="display: flex; gap: var(--spacing-sm); font-size: 0.85rem; color: var(--text-tertiary);">
+                                <span>Intermediate</span>
+                                <span>•</span>
+                                <span>28 lessons</span>
+                            </div>
+                        </div>
+                        <a href="courses.html" class="btn-outline btn-small" style="align-self: center;">View</a>
+                    </div>
+
+                    <div style="display: flex; gap: var(--spacing-md); padding: var(--spacing-md); border: 1px solid var(--border); border-radius: var(--radius-md); transition: var(--transition-base);">
+                        <div style="flex-shrink: 0; width: 120px; height: 80px; border-radius: var(--radius-sm); overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=200&h=150&fit=crop" alt="Course" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div style="flex: 1;">
+                            <h4 style="font-weight: 600; margin-bottom: var(--spacing-xs);">React for Beginners</h4>
+                            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: var(--spacing-xs);">Build modern web apps with React</p>
+                            <div style="display: flex; gap: var(--spacing-sm); font-size: 0.85rem; color: var(--text-tertiary);">
+                                <span>Beginner</span>
+                                <span>•</span>
+                                <span>20 lessons</span>
+                            </div>
+                        </div>
+                        <a href="courses.html" class="btn-outline btn-small" style="align-self: center;">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-brand">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 2L4 8V14C4 21 8 27 16 30C24 27 28 21 28 14V8L16 2Z" fill="currentColor"/>
+                            <path d="M16 10L12 12V16L16 18L20 16V12L16 10Z" fill="white"/>
+                        </svg>
+                        <span>Free Learning Hub</span>
+                    </div>
+                    <p class="footer-description">Empowering learners worldwide with free, high-quality education.</p>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Platform</h4>
+                    <ul class="footer-links">
+                        <li><a href="courses.html">Browse Courses</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="courses.html?category=web-development">Web Development</a></li>
+                        <li><a href="courses.html?category=data-science">Data Science</a></li>
+                        <li><a href="courses.html?category=design">Design</a></li>
+                        <li><a href="courses.html?category=business">Business</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="feedback.html">Feedback</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Free Learning Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <h2 class="modal-title">Welcome Back</h2>
+            <p class="modal-subtitle">Sign in to track your progress and access your courses</p>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required placeholder="Enter your username">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                </div>
+                <button type="submit" class="btn-primary btn-block">Sign In</button>
+            </form>
+            <p class="modal-note">Don't worry - we don't collect any data. This is just for demo purposes!</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

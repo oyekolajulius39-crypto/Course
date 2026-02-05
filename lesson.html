@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson - Free Learning Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path d="M16 2L4 8V14C4 21 8 27 16 30C24 27 28 21 28 14V8L16 2Z" fill="currentColor"/>
+                        <path d="M16 10L12 12V16L16 18L20 16V12L16 10Z" fill="white"/>
+                    </svg>
+                    <span>Free Learning Hub</span>
+                </a>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="courses.html" class="nav-link">Courses</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="feedback.html" class="nav-link">Feedback</a>
+            </div>
+            <div class="nav-actions">
+                <button class="btn-secondary" id="loginBtn">Sign In</button>
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Lesson Header -->
+    <div style="background: var(--surface); border-bottom: 1px solid var(--border); padding: var(--spacing-md) 0;">
+        <div class="container">
+            <div style="display: flex; align-items: center; gap: var(--spacing-sm); color: var(--text-secondary); font-size: 0.9rem; margin-bottom: var(--spacing-xs);">
+                <a href="courses.html" style="color: var(--text-secondary);">Courses</a>
+                <span>›</span>
+                <span id="courseTitle">Course</span>
+            </div>
+            <h1 id="lessonTitle" style="font-family: var(--font-display); font-size: 1.75rem; font-weight: 700;">
+                Loading lesson...
+            </h1>
+        </div>
+    </div>
+
+    <!-- Lesson Content -->
+    <section style="padding: var(--spacing-xl) 0 var(--spacing-2xl) 0;">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <!-- Tabs -->
+                <div class="tabs">
+                    <button class="tab active" onclick="switchTab('video')">Video</button>
+                    <button class="tab" onclick="switchTab('notes')">Lesson Notes</button>
+                    <button class="tab" onclick="switchTab('quiz')">Quiz</button>
+                </div>
+
+                <!-- Video Tab -->
+                <div id="videoTab" class="tab-content active">
+                    <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: var(--spacing-lg); margin-bottom: var(--spacing-lg);">
+                        <h2 style="font-size: 1.5rem; margin-bottom: var(--spacing-md);">Video Lesson</h2>
+                        <div class="iframe-container">
+                            <!-- Example YouTube video embed -->
+                            <iframe 
+                                src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                title="Lesson Video" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <p style="color: var(--text-secondary); margin-top: var(--spacing-md);">
+                            Watch the video above to learn the key concepts of this lesson. Take notes and feel free to pause and rewatch sections as needed.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Notes Tab -->
+                <div id="notesTab" class="tab-content">
+                    <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: var(--spacing-lg); margin-bottom: var(--spacing-lg);">
+                        <h2 style="font-size: 1.5rem; margin-bottom: var(--spacing-md);">Lesson Notes</h2>
+                        <div class="iframe-container" style="padding-bottom: 120%; min-height: 600px;">
+                            <!-- Example Google Docs embed -->
+                            <iframe 
+                                src="https://docs.google.com/document/d/e/2PACX-1vQN9XWd5VqY7sYqUmqXPNYzMqZgQQ7YUZ6K2f0rXLQQxXC9qY5YY5YY5YY5YY5YY5YY5YY5YY5YY5YY5/pub?embedded=true"
+                                title="Lesson Notes">
+                            </iframe>
+                        </div>
+                        <p style="color: var(--text-secondary); margin-top: var(--spacing-md);">
+                            <strong>Note:</strong> This is a placeholder Google Doc embed. In a real course, this would contain the actual lesson notes and materials.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Quiz Tab -->
+                <div id="quizTab" class="tab-content">
+                    <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: var(--spacing-lg); margin-bottom: var(--spacing-lg);">
+                        <h2 style="font-size: 1.5rem; margin-bottom: var(--spacing-md);">Lesson Quiz</h2>
+                        <div class="iframe-container" style="padding-bottom: 120%; min-height: 600px;">
+                            <!-- Example Google Forms embed -->
+                            <iframe 
+                                src="https://docs.google.com/forms/d/e/1FAIpQLSe_placeholder_form_id/viewform?embedded=true" 
+                                title="Lesson Quiz">
+                            </iframe>
+                        </div>
+                        <p style="color: var(--text-secondary); margin-top: var(--spacing-md);">
+                            <strong>Note:</strong> This is a placeholder Google Form embed. In a real course, this would contain quiz questions to test your understanding.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Lesson Actions -->
+                <div style="display: flex; gap: var(--spacing-md); flex-wrap: wrap; margin-top: var(--spacing-xl);">
+                    <button id="completeLessonBtn" class="btn-primary btn-large">
+                        Mark as Complete
+                    </button>
+                    <button id="nextLessonBtn" class="btn-outline btn-large">
+                        Next Lesson →
+                    </button>
+                </div>
+
+                <!-- Additional Resources -->
+                <div style="background: rgba(10, 77, 140, 0.05); border: 1px solid rgba(10, 77, 140, 0.1); border-radius: var(--radius-lg); padding: var(--spacing-lg); margin-top: var(--spacing-xl);">
+                    <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-md);">📚 Additional Resources</h3>
+                    <ul style="list-style: none; padding: 0; display: grid; gap: var(--spacing-sm);">
+                        <li>
+                            <a href="#" style="color: var(--primary); text-decoration: underline;">Download lesson slides (PDF)</a>
+                        </li>
+                        <li>
+                            <a href="#" style="color: var(--primary); text-decoration: underline;">Code examples and starter files</a>
+                        </li>
+                        <li>
+                            <a href="#" style="color: var(--primary); text-decoration: underline;">Recommended reading materials</a>
+                        </li>
+                        <li>
+                            <a href="#" style="color: var(--primary); text-decoration: underline;">Community discussion forum</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-brand">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 2L4 8V14C4 21 8 27 16 30C24 27 28 21 28 14V8L16 2Z" fill="currentColor"/>
+                            <path d="M16 10L12 12V16L16 18L20 16V12L16 10Z" fill="white"/>
+                        </svg>
+                        <span>Free Learning Hub</span>
+                    </div>
+                    <p class="footer-description">Empowering learners worldwide with free, high-quality education.</p>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Platform</h4>
+                    <ul class="footer-links">
+                        <li><a href="courses.html">Browse Courses</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="courses.html?category=web-development">Web Development</a></li>
+                        <li><a href="courses.html?category=data-science">Data Science</a></li>
+                        <li><a href="courses.html?category=design">Design</a></li>
+                        <li><a href="courses.html?category=business">Business</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="feedback.html">Feedback</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Free Learning Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <h2 class="modal-title">Welcome Back</h2>
+            <p class="modal-subtitle">Sign in to track your progress and access your courses</p>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required placeholder="Enter your username">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                </div>
+                <button type="submit" class="btn-primary btn-block">Sign In</button>
+            </form>
+            <p class="modal-note">Don't worry - we don't collect any data. This is just for demo purposes!</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        // Tab switching functionality
+        function switchTab(tabName) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Remove active class from all tabs
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Show selected tab content
+            document.getElementById(tabName + 'Tab').classList.add('active');
+            
+            // Add active class to clicked tab
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>

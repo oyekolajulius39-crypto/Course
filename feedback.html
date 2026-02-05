@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Free Learning Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path d="M16 2L4 8V14C4 21 8 27 16 30C24 27 28 21 28 14V8L16 2Z" fill="currentColor"/>
+                        <path d="M16 10L12 12V16L16 18L20 16V12L16 10Z" fill="white"/>
+                    </svg>
+                    <span>Free Learning Hub</span>
+                </a>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="courses.html" class="nav-link">Courses</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="feedback.html" class="nav-link active">Feedback</a>
+            </div>
+            <div class="nav-actions">
+                <button class="btn-secondary" id="loginBtn">Sign In</button>
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero" style="min-height: 40vh;">
+        <div class="hero-background">
+            <div class="hero-gradient"></div>
+            <div class="hero-pattern"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title" style="font-size: clamp(2.5rem, 6vw, 4rem);">
+                    <span class="title-line">We Value Your</span>
+                    <span class="title-line highlight">Feedback</span>
+                </h1>
+                <p class="hero-subtitle">Your input helps us improve our courses and create a better learning experience for everyone. Share your thoughts with us!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Content -->
+    <section style="padding: var(--spacing-2xl) 0;">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <!-- Feedback Form -->
+                <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: var(--spacing-xl); margin-bottom: var(--spacing-xl);">
+                    <h2 style="font-family: var(--font-display); font-size: 2rem; margin-bottom: var(--spacing-md);">Share Your Experience</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: var(--spacing-lg);">
+                        Help us improve by sharing your feedback, suggestions, or reporting any issues you've encountered.
+                    </p>
+                    
+                    <div class="iframe-container" style="padding-bottom: 120%; min-height: 700px;">
+                        <!-- Example Google Forms embed -->
+                        <iframe 
+                            src="https://docs.google.com/forms/d/e/1FAIpQLSe_placeholder_feedback_form/viewform?embedded=true" 
+                            title="Feedback Form">
+                        </iframe>
+                    </div>
+                    
+                    <p style="color: var(--text-tertiary); font-size: 0.85rem; margin-top: var(--spacing-md); padding-top: var(--spacing-md); border-top: 1px solid var(--border);">
+                        <strong>Note:</strong> This is a placeholder Google Form embed. In a real implementation, this would be connected to an actual feedback collection form.
+                    </p>
+                </div>
+
+                <!-- Alternative Feedback Methods -->
+                <div style="display: grid; gap: var(--spacing-md);">
+                    <div style="background: rgba(10, 77, 140, 0.05); border: 1px solid rgba(10, 77, 140, 0.1); border-radius: var(--radius-lg); padding: var(--spacing-lg);">
+                        <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-sm); display: flex; align-items: center; gap: var(--spacing-sm);">
+                            <span>📧</span>
+                            Email Us
+                        </h3>
+                        <p style="color: var(--text-secondary); margin-bottom: var(--spacing-sm);">
+                            Prefer to send detailed feedback via email?
+                        </p>
+                        <a href="mailto:feedback@freelearninghub.com" style="color: var(--primary); font-weight: 600; text-decoration: underline;">
+                            feedback@freelearninghub.com
+                        </a>
+                    </div>
+
+                    <div style="background: rgba(40, 167, 69, 0.05); border: 1px solid rgba(40, 167, 69, 0.1); border-radius: var(--radius-lg); padding: var(--spacing-lg);">
+                        <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-sm); display: flex; align-items: center; gap: var(--spacing-sm);">
+                            <span>💬</span>
+                            Join Our Community
+                        </h3>
+                        <p style="color: var(--text-secondary); margin-bottom: var(--spacing-sm);">
+                            Connect with other learners and share your experiences
+                        </p>
+                        <a href="#" style="color: var(--success); font-weight: 600; text-decoration: underline;">
+                            Visit Community Forum
+                        </a>
+                    </div>
+
+                    <div style="background: rgba(230, 92, 0, 0.05); border: 1px solid rgba(230, 92, 0, 0.1); border-radius: var(--radius-lg); padding: var(--spacing-lg);">
+                        <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-sm); display: flex; align-items: center; gap: var(--spacing-sm);">
+                            <span>🐛</span>
+                            Report a Bug
+                        </h3>
+                        <p style="color: var(--text-secondary); margin-bottom: var(--spacing-sm);">
+                            Found a technical issue? Let us know so we can fix it
+                        </p>
+                        <a href="#" style="color: var(--accent); font-weight: 600; text-decoration: underline;">
+                            Submit Bug Report
+                        </a>
+                    </div>
+                </div>
+
+                <!-- FAQ Section -->
+                <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: var(--spacing-xl); margin-top: var(--spacing-xl);">
+                    <h2 style="font-family: var(--font-display); font-size: 2rem; margin-bottom: var(--spacing-lg);">Frequently Asked Questions</h2>
+                    
+                    <div style="display: grid; gap: var(--spacing-lg);">
+                        <div>
+                            <h4 style="font-size: 1.1rem; font-weight: 600; margin-bottom: var(--spacing-xs);">How long does it take to get a response?</h4>
+                            <p style="color: var(--text-secondary);">We typically respond to feedback within 2-3 business days. Urgent issues are prioritized.</p>
+                        </div>
+                        
+                        <div>
+                            <h4 style="font-size: 1.1rem; font-weight: 600; margin-bottom: var(--spacing-xs);">Can I suggest new course topics?</h4>
+                            <p style="color: var(--text-secondary);">Absolutely! We love hearing course suggestions from our community. Use the feedback form above to share your ideas.</p>
+                        </div>
+                        
+                        <div>
+                            <h4 style="font-size: 1.1rem; font-weight: 600; margin-bottom: var(--spacing-xs);">Is my feedback anonymous?</h4>
+                            <p style="color: var(--text-secondary);">You can choose to submit feedback anonymously or include your contact information if you'd like us to follow up.</p>
+                        </div>
+                        
+                        <div>
+                            <h4 style="font-size: 1.1rem; font-weight: 600; margin-bottom: var(--spacing-xs);">How do you use the feedback?</h4>
+                            <p style="color: var(--text-secondary);">We review all feedback carefully to improve our courses, fix bugs, and enhance the overall learning experience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-brand">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 2L4 8V14C4 21 8 27 16 30C24 27 28 21 28 14V8L16 2Z" fill="currentColor"/>
+                            <path d="M16 10L12 12V16L16 18L20 16V12L16 10Z" fill="white"/>
+                        </svg>
+                        <span>Free Learning Hub</span>
+                    </div>
+                    <p class="footer-description">Empowering learners worldwide with free, high-quality education.</p>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Platform</h4>
+                    <ul class="footer-links">
+                        <li><a href="courses.html">Browse Courses</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="courses.html?category=web-development">Web Development</a></li>
+                        <li><a href="courses.html?category=data-science">Data Science</a></li>
+                        <li><a href="courses.html?category=design">Design</a></li>
+                        <li><a href="courses.html?category=business">Business</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="feedback.html">Feedback</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Free Learning Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <h2 class="modal-title">Welcome Back</h2>
+            <p class="modal-subtitle">Sign in to track your progress and access your courses</p>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required placeholder="Enter your username">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                </div>
+                <button type="submit" class="btn-primary btn-block">Sign In</button>
+            </form>
+            <p class="modal-note">Don't worry - we don't collect any data. This is just for demo purposes!</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

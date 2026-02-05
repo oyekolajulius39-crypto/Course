@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Free Learning Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path d="M16 2L4 8V14C4 21 8 27 16 30C24 27 28 21 28 14V8L16 2Z" fill="currentColor"/>
+                        <path d="M16 10L12 12V16L16 18L20 16V12L16 10Z" fill="white"/>
+                    </svg>
+                    <span>Free Learning Hub</span>
+                </a>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="courses.html" class="nav-link">Courses</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="about.html" class="nav-link active">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="feedback.html" class="nav-link">Feedback</a>
+            </div>
+            <div class="nav-actions">
+                <button class="btn-secondary" id="loginBtn">Sign In</button>
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero" style="min-height: 50vh;">
+        <div class="hero-background">
+            <div class="hero-gradient"></div>
+            <div class="hero-pattern"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title" style="font-size: clamp(2.5rem, 6vw, 4rem);">
+                    <span class="title-line">About</span>
+                    <span class="title-line highlight">Free Learning Hub</span>
+                </h1>
+                <p class="hero-subtitle">Making quality education accessible to everyone, everywhere, at no cost.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section style="padding: var(--spacing-2xl) 0;">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: var(--spacing-xl); margin-bottom: var(--spacing-xl);">
+                    <h2 style="font-family: var(--font-display); font-size: 2.5rem; margin-bottom: var(--spacing-lg); text-align: center;">Our Mission</h2>
+                    <p style="font-size: 1.2rem; line-height: 1.8; color: var(--text-secondary); text-align: center; margin-bottom: var(--spacing-lg);">
+                        We believe that education is a fundamental right, not a privilege. Free Learning Hub was created to break down barriers to learning and provide high-quality educational content to anyone with an internet connection.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary); text-align: center;">
+                        Our platform offers comprehensive courses across multiple disciplines, all completely free. No hidden costs, no paywalls—just pure learning.
+                    </p>
+                </div>
+
+                <!-- Values Grid -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-lg); margin-bottom: var(--spacing-2xl);">
+                    <div style="background: linear-gradient(135deg, rgba(10, 77, 140, 0.05), rgba(10, 77, 140, 0.02)); border: 1px solid rgba(10, 77, 140, 0.1); border-radius: var(--radius-lg); padding: var(--spacing-lg); text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: var(--spacing-md);">🎓</div>
+                        <h3 style="font-size: 1.5rem; margin-bottom: var(--spacing-sm);">Quality First</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.6;">
+                            Every course is carefully crafted by industry experts to ensure you're learning relevant, up-to-date skills.
+                        </p>
+                    </div>
+
+                    <div style="background: linear-gradient(135deg, rgba(40, 167, 69, 0.05), rgba(40, 167, 69, 0.02)); border: 1px solid rgba(40, 167, 69, 0.1); border-radius: var(--radius-lg); padding: var(--spacing-lg); text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: var(--spacing-md);">🌍</div>
+                        <h3 style="font-size: 1.5rem; margin-bottom: var(--spacing-sm);">Accessible</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.6;">
+                            Learn anytime, anywhere, on any device. Our platform is designed to work seamlessly across all screens.
+                        </p>
+                    </div>
+
+                    <div style="background: linear-gradient(135deg, rgba(230, 92, 0, 0.05), rgba(230, 92, 0, 0.02)); border: 1px solid rgba(230, 92, 0, 0.1); border-radius: var(--radius-lg); padding: var(--spacing-lg); text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: var(--spacing-md);">💯</div>
+                        <h3 style="font-size: 1.5rem; margin-bottom: var(--spacing-sm);">100% Free</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.6;">
+                            No subscriptions, no hidden fees. All our courses are completely free, forever.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Story Section -->
+                <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: var(--spacing-xl); margin-bottom: var(--spacing-xl);">
+                    <h2 style="font-family: var(--font-display); font-size: 2rem; margin-bottom: var(--spacing-md);">Our Story</h2>
+                    <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--spacing-md);">
+                        Free Learning Hub was founded in 2024 with a simple vision: to democratize education and make world-class learning resources available to everyone, regardless of their financial situation.
+                    </p>
+                    <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--spacing-md);">
+                        We started with just a handful of courses in web development and have since expanded to cover technology, business, design, and more. Today, we're proud to serve thousands of learners from around the world.
+                    </p>
+                    <p style="color: var(--text-secondary); line-height: 1.8;">
+                        Our platform is built on open-source principles and powered by passionate educators who believe in the transformative power of education. Every course is a labor of love, created to help you achieve your personal and professional goals.
+                    </p>
+                </div>
+
+                <!-- Stats -->
+                <div style="background: linear-gradient(135deg, var(--primary), var(--primary-dark)); border-radius: var(--radius-lg); padding: var(--spacing-2xl); color: white; text-align: center; margin-bottom: var(--spacing-xl);">
+                    <h2 style="font-family: var(--font-display); font-size: 2rem; margin-bottom: var(--spacing-xl);">Our Impact</h2>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-xl);">
+                        <div>
+                            <div style="font-size: 3rem; font-family: var(--font-display); font-weight: 700; margin-bottom: var(--spacing-xs);">10,000+</div>
+                            <div style="opacity: 0.9;">Active Learners</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 3rem; font-family: var(--font-display); font-weight: 700; margin-bottom: var(--spacing-xs);">50+</div>
+                            <div style="opacity: 0.9;">Free Courses</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 3rem; font-family: var(--font-display); font-weight: 700; margin-bottom: var(--spacing-xs);">95%</div>
+                            <div style="opacity: 0.9;">Satisfaction Rate</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 3rem; font-family: var(--font-display); font-weight: 700; margin-bottom: var(--spacing-xs);">150+</div>
+                            <div style="opacity: 0.9;">Countries Reached</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Section -->
+                <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: var(--spacing-xl);">
+                    <h2 style="font-family: var(--font-display); font-size: 2rem; margin-bottom: var(--spacing-md); text-align: center;">Our Commitment</h2>
+                    <div style="display: grid; gap: var(--spacing-lg);">
+                        <div style="padding: var(--spacing-lg); background: rgba(10, 77, 140, 0.03); border-left: 4px solid var(--primary); border-radius: var(--radius-sm);">
+                            <h4 style="font-size: 1.25rem; font-weight: 600; margin-bottom: var(--spacing-xs);">To Our Learners</h4>
+                            <p style="color: var(--text-secondary); line-height: 1.7;">
+                                We promise to always keep our courses free, continuously update content to stay current with industry trends, and provide the best learning experience possible.
+                            </p>
+                        </div>
+                        
+                        <div style="padding: var(--spacing-lg); background: rgba(40, 167, 69, 0.03); border-left: 4px solid var(--success); border-radius: var(--radius-sm);">
+                            <h4 style="font-size: 1.25rem; font-weight: 600; margin-bottom: var(--spacing-xs);">To Education</h4>
+                            <p style="color: var(--text-secondary); line-height: 1.7;">
+                                We're committed to maintaining high-quality standards in all our courses and working with educators who are passionate about teaching.
+                            </p>
+                        </div>
+                        
+                        <div style="padding: var(--spacing-lg); background: rgba(230, 92, 0, 0.03); border-left: 4px solid var(--accent); border-radius: var(--radius-sm);">
+                            <h4 style="font-size: 1.25rem; font-weight: 600; margin-bottom: var(--spacing-xs);">To Our Community</h4>
+                            <p style="color: var(--text-secondary); line-height: 1.7;">
+                                We value feedback and actively work to improve based on learner suggestions. Your success is our success.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Join Our Community</h2>
+                <p class="cta-subtitle">Start your learning journey today and join thousands of students worldwide</p>
+                <a href="courses.html" class="btn-primary btn-large">Explore Courses</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-brand">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 2L4 8V14C4 21 8 27 16 30C24 27 28 21 28 14V8L16 2Z" fill="currentColor"/>
+                            <path d="M16 10L12 12V16L16 18L20 16V12L16 10Z" fill="white"/>
+                        </svg>
+                        <span>Free Learning Hub</span>
+                    </div>
+                    <p class="footer-description">Empowering learners worldwide with free, high-quality education.</p>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Platform</h4>
+                    <ul class="footer-links">
+                        <li><a href="courses.html">Browse Courses</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="courses.html?category=web-development">Web Development</a></li>
+                        <li><a href="courses.html?category=data-science">Data Science</a></li>
+                        <li><a href="courses.html?category=design">Design</a></li>
+                        <li><a href="courses.html?category=business">Business</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="feedback.html">Feedback</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Free Learning Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <h2 class="modal-title">Welcome Back</h2>
+            <p class="modal-subtitle">Sign in to track your progress and access your courses</p>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required placeholder="Enter your username">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                </div>
+                <button type="submit" class="btn-primary btn-block">Sign In</button>
+            </form>
+            <p class="modal-note">Don't worry - we don't collect any data. This is just for demo purposes!</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
